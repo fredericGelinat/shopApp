@@ -1,0 +1,25 @@
+<div class="articleItem">
+  <div class="productImg">
+    <!-- estce que product existe?
+    OUI ALORS PRODUCT.IMGurl
+    non alors :'imgaléatoire'-->
+    <img
+      [src]="product ? product.imgUrl[0] : ''"
+      height="300"
+      width="300"
+      alt="dessin numérique art digital amateur"
+    />
+  </div>
+  <div class="productDetails">
+    <div class="productName">
+      <h2>{{ product?.name }}</h2>
+    </div>
+    <div class="productPrice">
+      <!--???? sert pour le undefined-->
+      <h3>€ {{ (product?.soldPrice || 0) / 100 }}</h3>
+      <del>
+        <h3>€{{ (product?.regularPrice || 0) / 100 }}</h3></del
+      >
+    </div>
+  </div>
+</div>
